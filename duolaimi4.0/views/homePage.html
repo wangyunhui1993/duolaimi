@@ -1,0 +1,65 @@
+<link rel="stylesheet" type="text/css" href="/stylesheets/bannerstyle.css">
+<div class="main">
+	<div class="main_wrap">
+
+		<div class="main_box" id="m_box">
+			<!-- 上一张按钮 a标签 -->
+
+			<a href="javascript:void(0)" class="banner_btn js_pre">
+				<!-- 左右图标 -->
+				<span class="banner_btn_arrow"><i></i></span>
+			</a>
+			<!-- 下一张按钮 a标签-->
+			<a href="javascript:void(0)" class="banner_btn btn_next js_next">
+				<!-- 左右图标 -->
+				<span class="banner_btn_arrow"><i></i></span>
+			</a>
+			<!-- 图片 -->
+			<ul>
+				<li id="imgCard0">
+					<a href=""><span style="opacity:0;"></span></a>
+					<img src="images/banner/1.jpg" alt="">
+					<p style="bottom:0">这是第一张</p>
+				</li>
+				<li id="imgCard1">
+					<a href=""><span style="opacity:0.4;"></span></a>
+					<img src="images/banner/2.jpg" alt="">
+					<p>这是第二张</p>
+				</li>
+				<li id="imgCard2">
+					<a href=""><span style="opacity:0.4;" ></span></a>
+					<img src="images/banner/3.jpg" alt="">
+					<p>这是第三张</p>
+				</li>
+				<li id="imgCard3">
+					<a href=""><span style="opacity:0.4;"></span></a>
+					<img src="images/banner/4.jpg" alt="">
+					<p>这是第四张</p>
+				</li>
+				<li id="imgCard4">
+					<a href=""><span style="opacity:0.4;"></span></a>
+					<img src="images/banner/5.jpg" alt="">
+					<p>这是第五张</p>
+				</li>
+			</ul>
+			<!--倒影图层-->
+			<p id="rflt"></p>
+			<!--倒影图层-->
+		</div>
+		<!--轮播小按钮-->
+		<div class="btn_list">
+			<span class="curr"></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</div>
+ </div>
+	<div class="content" id="content">
+		<div ng-repeat="result in allCommodity">
+			<img src="/images/commodityImages/{{result.commodityImages[0]}}" class='customImg' ng-click="commodityDetail($index)" />
+			<div class='meessage_div'><div class='clothPrice'><div class='priceDiv'><span>¥</span> <span class='price'>{{result.commodityPrice[0]}}</span><span class='freeGet'>包邮</span></div><div class='buyNumDiv'><span>人付款</span><span class='buyNum'>{{result.salesNum}}</span></div></div><div class='clothLink'><a href='##' ng-click="commodityDetail($index)">{{result.commodityTitle}}</a></div><div class='clothAdress'><div><span class='shopName fa fa-align-justify'><a href='##' id='shopLink'>{{result.shopName}}</a></span></div><div><span class='clothCity'>{{result.address[1]}}</span> <span class='clothProvice'>{{result.address[0]}}</span></div></div></div>
+		</div>
+	</div>
+<script src="/javascripts/banner.js"></script>

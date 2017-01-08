@@ -1,0 +1,25 @@
+<div class="nav_list">
+    <span>全部宝贝</span>
+    <div class="input-group input-group-sm search_clothing">
+        <input type="text" class="form-control" placeholder="搜索商品">
+        <span class="input-group-addon  fa fa-search"></span>
+    </div>
+    <div class="commodityList">
+
+        <div class="singleCommodity" ng-repeat="commodity in commoditys">
+            <img src="images\commodityImages\{{commodity.commodityImages}}" alt="" ng-click="detail($index)">
+            <a class="title"  ng-click="detail($index)">{{commodity.commodityTitle}}</a>
+            <p class="price"><span>￥</span><span>{{commodity.price}}</span></p>
+            <div></div>
+        </div>
+
+        <div class="singleCommodity" ng-repeat="commodity in limitcommoditys">
+            <img src="images\commodityImages\{{commodity.commodityImages}}" alt=""  ng-click="limitdetail($index)">
+            <a class="title"  ng-click="limitdetail($index)">{{commodity.commodityTitle}}</a>
+            <p class="price">该商品已失效了</p>
+            <div></div>
+        </div>
+
+
+    </div>
+</div>

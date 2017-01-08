@@ -1,0 +1,33 @@
+<div class="left_part">
+    <div class="user_bar">
+        <div class="base_info">
+            <div class="user_photo"  style="background:url('images/headImg/{{data.headImg}}') no-repeat center;background-size:contain">
+                <!--<img src="" alt="" />-->
+                <a href="#/myInformations/personalData">编辑资料</a>
+            </div>
+
+            <div class="user_name">
+                <p class="">
+                    用户名：
+                </p>
+                <p>
+                    <a href="#/myInformations/personalData">{{data.userName}}</a>
+                </p>
+            </div>
+
+        </div>
+    </div>
+    <div class="trade_state">
+        <ul>
+            <!--<li><a href="">待付款<span>1</span></a></li>-->
+            <li><a href="">待发货<span>2</span></a></li>
+            <li><a href="">待收货<span>3</span></a></li>
+            <li><a href="">待评价<span>4</span></a></li>
+            <li><a href="">退款<span>1</span></a></li>
+
+        </ul>
+    </div>
+</div>
+<div class="right_part">
+    <ui-view></ui-view>
+</div>

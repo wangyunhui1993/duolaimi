@@ -1,0 +1,100 @@
+
+<!--<div  class='header'>-->
+    <!--<div class='contentHeader'>-->
+        <!--<div class="navLeft" id="navLeft">-->
+            <!--<a id="pleaselogin" href="loginPage.html" target="_blank">亲，请登录</a><a id="pleaseregister" href="register.html" target="_blank">免费注册</a>-->
+        <!--</div>-->
+        <!--<div class="navRight">-->
+            <!--<ul>-->
+                <!--&lt;!&ndash;<li><a href="index.html" class="right">哆来咪首页</a></li>&ndash;&gt;-->
+                <!--&lt;!&ndash;<li><a href="myInformations.html">我的信息<i></i></a></li>&ndash;&gt;-->
+                <!--&lt;!&ndash;<li><a href="myShopping.html">购物车</a></li>&ndash;&gt;-->
+                <!--&lt;!&ndash;<li><a href="#">收藏夹</a></li>&ndash;&gt;-->
+                <!--&lt;!&ndash;<li><a href="##" id="sellerCenter">卖家中心</a></li>&ndash;&gt;-->
+                <!--<li><a href="index.html" class="right">哆来咪首页</a></li>-->
+                <!--<li><a href="#/myInformations/tradeState">我的信息<i></i></a></li>-->
+                <!--<li><a href="#/shoppingCar">购物车</a></li>-->
+                <!--<li><a href="#/myCollect">收藏夹</a></li>-->
+                <!--<li><a href="##" id="sellerCenter">卖家中心</a></li>-->
+            <!--</ul>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+
+<link rel="stylesheet" type="text/css" href="/stylesheets/sellerPage.css">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+<link rel="stylesheet" href="../dist/css/bootstrap.min.css">
+<script src="../dist/js/bootstrap.min.js"></script>
+<div class="content">
+    <div class="seller_center_div">
+        <div class="logo_div"><a href="index.html" class="logo_a"><img src="images/logo.png" alt=""></a></div>
+        <div class="seller_font"><h1>卖家中心</h1></div>
+    </div>
+    <div class="top_nav">
+        <nav class="navbar navbar-default navbar-inverse">
+            <ul class="nav navbar-nav " >
+                <li><a href="#">首页</a></li>
+                <li><a href="#">基础设置</a></li>
+                <li><a href="#">规则中心</a></li>
+                <li><a href="#">服务中心</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="center_div">
+        <div class="left_nav">
+            <ul>
+                <li>
+                    <div>交易管理</div>
+                    <ol>
+                        <li><a href="">已卖出的宝贝</a></li>
+                        <li><a href="">评价管理</a></li>
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                    </ol>
+                </li>
+                <li>
+                    <div>物流管理</div>
+                    <ol>
+                        <li><a href="">发货</a></li>
+                        <li><a href="">物流工具</a></li>
+                        <li><a href="">物流服务</a></li>
+                        <li><a href=""></a></li>
+                    </ol>
+                </li>
+                <li>
+                    <div>宝贝管理</div>
+                    <ol>
+                        <!--<li><a ng-click="skipPage('issuedCommodity.html')">发布宝贝</a></li>-->
+                        <li><a href="#/sellerPage/issuedCommodity">发布宝贝</a></li>
+                        <li><a href="">出售中的宝贝</a></li>
+                        <li><a href="">橱窗推荐</a></li>
+                        <li><a href="">仓库中的宝贝</a></li>
+                    </ol>
+                </li>
+                <li>
+                    <div>店铺管理</div>
+                    <ol>
+                        <li><a href="">查看店铺</a></li>
+                        <li><a href="">店铺设置</a></li>
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                    </ol>
+                </li>
+                <li>
+                    <div>客户服务</div>
+                    <ol>
+                        <li><a href="">售后管理</a></li>
+                        <li><a href="">退款管理</a></li>
+                        <li><a href="">违规记录</a></li>
+                        <li><a href="">投诉管理</a></li>
+                    </ol>
+                </li>
+            </ul>
+        </div>
+        <div class="center_view">
+            <ui-view></ui-view>
+        </div>
+    </div>
+</div>
+<script src="/javascripts/operateCookie.js"></script>
+

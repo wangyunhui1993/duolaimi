@@ -1,0 +1,30 @@
+
+#footer{
+	width: 990px;
+	height: 86px;
+	margin: 0 auto;
+	padding-top:30px ;
+	border-top:1px #e5e5e5 solid ;
+}
+#footer a{
+	color: #575757;
+	text-decoration: none;
+	font-size: 14px;
+	padding: 0 10px;
+}
+#footer a:hover{
+	text-decoration: underline;
+	color: red;
+}
+.links{
+	width: 990px;
+height: 18px;
+}
+.copyright{
+	height: 18px;
+	width: 990px;
+	margin: 10px auto;
+	color: #666;
+	font-size: 10px;
+	text-align: center;
+}

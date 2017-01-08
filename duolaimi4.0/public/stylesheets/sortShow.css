@@ -1,0 +1,114 @@
+.content{
+    width: 1162px;
+    margin-top: 20px;
+    margin: 0 auto;
+    /*height: 2000px;*/
+    /*border: 1px red solid;*/
+    padding:0 15px;
+}
+.content:after{
+    clear:both;
+    content:'.';
+    display:block;
+    width: 0;
+    height: 0;
+    visibility:hidden;
+}
+.content>div{
+    float: left;
+    width: 270px;
+    height:370px;
+    margin: 15px 9px;
+    border: 1px #888 solid;
+}
+.content>div:hover{
+    border: 1px red solid;
+}
+.customImg{
+    float: left;
+    top: 0px;
+    width: 270px;
+    height: 270px;
+    cursor: pointer;
+
+}
+.meessage_div{
+    float: left;
+    width: 250px;
+    padding:0 10px;
+    margin-top: 10px;
+    height: 90px;
+}
+.clothPrice{
+    height: 25px;
+    width: 250px;
+}
+.clothLink{
+    height: 40px;
+    width: 250px;
+}
+.clothAdress{
+    height: 20px;
+    width: 250px;
+}
+.priceDiv{
+    /*width: 150px;*/
+    height: 25px;
+    float: left;
+    color: red;
+    font-size: 20px;
+    font-weight:bold;
+}
+.priceDiv .freeGet{
+    font-size: 13px;
+    background: red;
+    color: white;
+    display: inline-block;
+    margin-left: 5px;
+    font-weight: 500;
+    /*line-height: 25px;*/
+}
+.buyNumDiv{
+    /*width: 110px;*/
+    height: 25px;
+    float: right;
+    color: #888;
+    font-size:12px;
+    line-height: 25px;
+    padding-right: 10px;
+}
+.buyNumDiv span{
+    float: right;
+}
+.clothLink a{
+    font-size: 10px;
+    color: #000000;
+    text-decoration: none;
+}
+.clothLink a:hover{
+    color: red;
+    text-decoration: underline;
+}
+.clothAdress div:first-child{
+    float: left;
+    height: 20px;
+    font-size: 13px;
+    color: red;
+
+}
+.clothAdress div:last-child{
+    float: right;
+    height: 20px;
+    font-size: 13px;
+    color: #888;
+    padding-right: 10px;
+    line-height: 20px;
+}
+#shopLink{
+    display: inline-block;
+    padding-left: 5px;
+    color:#888;
+}
+#shopLink:hover{
+    color: red;
+}

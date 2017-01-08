@@ -1,0 +1,231 @@
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/purchasePage.css">
+    <link rel="stylesheet" href="stylesheets/loginCK.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+    <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+    <script type="text/javascript" src="javascripts/jquery.imagezoom.js"></script>
+    <div id="demo">
+
+        <div class="headerb">
+            <div class='logo'><img src="images/logo.png" alt="" /></div>
+            <div class="search_div"><p class="pp"><input type="text" placeholder="搜索：关键词" class="searchcontent"/><span class="fa fa-search"></span></p><input type="button" value="全网搜" id="searchcustume" /><input type="button" value="搜本店" id="thisShopSearch" /></div>
+        </div>
+
+    </div>
+<div class="content" id="content">
+    <div class="detail" >
+       <div class="detail_div">
+            <div class="detail_left">
+
+
+
+
+
+
+                <div class="box">
+                    <div class="tb-booth tb-pic tb-s310">
+                        <a href="images/commodityImages/{{mine.bigImg}}"><img src="images/commodityImages/{{mine.bigImg}}"  rel="images/commodityImages/{{mine.bigImg}}" class="jqzoom" /></a>
+                    </div>
+                    <ul class="tb-thumb" id="thumblist">
+                        <li class="tb-selected " ng-repeat="arr in result.commodityImages"><div class="tb-pic tb-s40"><a  class="commodityImages"><img src="images/commodityImages/{{arr}}" mid="images/commodityImages/{{arr}}" big="images/commodityImages/{{arr}}"></a></div></li>
+                    </ul>
+                </div>
+
+
+
+                <!--<div class="img_part">-->
+                    <!--<img src="img/picture/1.jpg" alt="">-->
+                <!--</div>-->
+                <div class="describe_part">
+                    <h3>
+                        {{result.commodityTitle}}
+                    </h3>
+                    <p class="short_describe">{{result.commodityBright}}</p>
+                    <div class="price_div">
+                        <div class="">
+                            <div class="final_price">
+                                <span>价格</span><em>¥</em><em>{{mine.price}}</em>
+                            </div>
+                            <div class="trade_mes">
+                                <div>
+                                    <span>{{result.salesNum}}</span>
+                                    <span>交易成功</span>
+                                </div>
+                                <div>
+                                    <span>{{result.commodityComment}}</span>
+                                    <span>累计评价</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cloth_mes">
+                        <div class="size_div">
+                            <span>尺码</span>
+                            <ul id="heightUl">
+                                <li ng-repeat="height in result.referenceHeight" ng-click="mine.hieght($index)" class="height">{{height}}</li>
+                            </ul>
+                        </div>
+                        <div class="color-div">
+                            <span>颜色</span>
+                            <div>
+                                <ul id="colorUl">
+                                    <li class="colorLi" ng-repeat="color in  result.commodityColorImages" ng-click="mine.colorImages($index)" ng-style="mystyle={'background-image':'url(images/commodityImages/{{color}}','background-size':'36px 36px'}"></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <div class="count_div">
+                            <span>数量</span>
+                            <div>
+                                <a href="javascript:void(0);" onclick="reduceNum()" class="fa fa-minus" id="reduceNum"></a>
+                                <input type="text" id="purchaseNum" value="{{num}}">
+                                <a href="javascript:void(0);" onclick="addNum()" class="fa fa-plus" id="addNum"></a>
+                                <span class="resever_span">件(库存<span></span>{{mine.quantity}}件)</span>
+                             </div>
+                        </div>
+                        <div class="action_div">
+                            <a href="">立即购买</a>
+                            <a href="javascript:void(0);" onclick="addShopping()" class="fa fa-cart-plus"> 加入购物车</a>
+                        </div>
+                        <p id="selectInfo"></p>
+                    </div>
+                </div>
+            </div>
+           <div class="detail_right">
+                <div class="store_mes_div">
+                    <div class="store_name_div"><h2>{{result.shopName}}</h2></div>
+                    <div class="manager_name_div">
+                        <label for="">掌柜:</label>
+                        <a href="">{{result.shopUserName}}</a>
+                    </div>
+                    <div class="connect_div">
+                        <label for="">联系:</label>
+                        <a href=""><img src="images/connect.gif" alt=""></a>
+                    </div>
+                    <div class="collect_div">
+                        <i  class="fa fa-star"></i><a href="" ng-click="collect()">收藏宝贝</a>
+                        <span>(<span>{{result.collectionNum}}</span>人气)</span>
+                    </div>
+                    <div class="share_div">
+                       <i class="fa fa-share-alt"></i> <a href="" onclick="shareToCommunity()">分享到社区</a>
+                        <div class="jumplog">
+                            <h5>分享理由：</h5>
+                            <textarea id="textarea" placeholder="回复内容"></textarea>
+                            <input type="button" value="分享" id="shareButton" ng-click="share()">
+                            <input type="button" value="取消" id="cancal">
+                        </div>
+                    </div>
+                    <div class="shop_into_div">
+                        <a href="">进入店铺</a>
+                        <a href="">收藏店铺</a>
+
+                    </div>
+                </div>
+
+           </div>
+       </div>
+
+    </div>
+    <div class="good_property_div">
+        <div class="good_property">
+            <div class="detail_comment_nav">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a  ng-click="detail()">宝贝详情</a></li>
+                    <li><a  ng-click="comment()">累计评价<span>{{result.commodityComment}}</span></a></li>
+                </ul>
+            </div>
+            <ui-view></ui-view>
+            <!--<div class="good_property_wrap">-->
+                <!--<div class="property_div">-->
+                    <!--<ul>-->
+                        <!--<li ng-repeat="arrPro in mine.commodityProperty">{{arrPro}}</li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+                <!--<div class="property_img">-->
+                    <!--<h2>{{result.commodityTextDetail}}</h2>-->
+                    <!--<img  ng-repeat="detailImg in result.commodityImgDetail" src="images/commodityImages/{{detailImg}}" alt="" >-->
+                <!--</div>-->
+            <!--</div>-->
+        </div>
+    </div>
+
+
+
+<!--登录-->
+    <div class="loginPhoneBox">
+        <div class="loginPhoneBoxTop">
+            <h4>请先登录</h4>
+            <span class="closeBox" title="关闭登录框">×</span>
+        </div>
+        <div class="loginPhoneBoxMiddle">
+            <div class="loginInfo">用户名或密码错误</div>
+            <div class="phoneBoxText">
+                <input type="text" placeholder="请输入用户名" maxlength="11">
+                <span class="accountTip"></span>
+            </div>
+            <div class="phoneBoxPwd">
+                <input type="password" placeholder="请输入密码">
+                <span class="passwordTip"></span>
+            </div>
+            <div class="loginValidate">
+                <input class="loginValidateInput" type="text" placeholder="请输入验证码" maxlength="4">
+                <canvas id="myCan" width="90" height="32" title="点击刷新验证码"></canvas>
+                <span class="logVerCodeTip"></span>
+            </div>
+            <div class="phoneLoginAuto">
+                <input type="checkbox" checked id="loginAuto">
+                <label for="loginAuto">自动登录</label>
+                <a href="" target="_blank">忘记密码？</a>
+            </div>
+            <div class="loginBtn">
+                <input type="button" value="登&nbsp;&nbsp;录">
+            </div>
+        </div>
+        <div class="loginPhoneBoxBottom">
+            <!--<a class="other" href="javascript:;">&lt;在线浏览，暂不登录</a>-->
+            <a class="register" href="javascript:;">没有帐号？免费注册&gt;</a>
+        </div>
+    </div>
+
+
+    <!--左边购物车-->
+    <div class="m-sidebar">
+        <div class="cart">
+            <a href="#/shoppingCar"><i id="end"></i></a>
+            <span><a href="#/shoppingCar" >购物车</a></span>
+
+        </div>
+    </div>
+    <div id="msg">已成功加入购物车！</div>
+    <!--<div>
+        <img src="img/picture/1.jpg" alt=""  class="customImg"/>
+        <div class="meessage_div">
+            <div class="clothPrice">
+                <div class="priceDiv">
+                    <span>¥</span> <span class="price">99.99</span><span class="freeGet">包邮</span>
+                </div>
+                <div class="buyNumDiv">
+                    <span>人付款</span><span class="buyNum">1234</span>
+                </div>
+            </div>
+            <div class="clothLink">
+                <a href="">童装秋装套装2016新款儿童运动服装男童女童衣服小学生校服套装</a>
+            </div>
+            <div class="clothAdress">
+                <div><span class="shopName fa fa-align-justify"><a href="##" id="shopLink">童装专卖店</a></span></div>
+                <div><span class="clothCity">郑州</span><span class="clothProvice">河南</span></div>
+            </div>
+        </div>
+    </div>-->
+    <!--<div><img src="img/picture/1.jpg" alt=""  class="customImg"/></div>
+    <div><img src="img/picture/1.jpg" alt=""  class="customImg"/></div>
+    <div><img src="img/picture/1.jpg" alt=""  class="customImg"/></div>
+    <div><img src="img/picture/1.jpg" alt=""  class="customImg"/></div>-->
+</div>
+
+<script src="/javascripts/operateCookie.js"></script>
+<script src="javascripts/loginCK.js"></script>
+<!--<script src="/angularjs/angular/angular.js"></script>-->
+<!--<script src="/angularjs/angular-ui/angular-ui-router.js"></script>-->
+<script type="text/javascript" src='javascripts/purchasePage.js'></script>
+<!--<script src="routejs/detailRoute.js"></script>-->

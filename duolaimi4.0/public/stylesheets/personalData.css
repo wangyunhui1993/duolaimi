@@ -1,0 +1,284 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.header .contentHeader{
+    width:990px;
+}
+.navigation{
+    width: 100%;
+    height: 60px;
+    /*background: red;*/
+}
+
+.navigation_top{
+    width: 990px;
+    height: 60px;
+    margin: 0 auto;
+    background: red;
+}
+
+.navigation_top .logo{
+    padding-right: 30px;
+    float: left;
+}
+.navigation_top_list{
+    list-style-type: none;
+}
+.navigation_top_list>li{
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 20px;
+    line-height: 60px;
+    color: white;
+    float: left;
+}
+.navigation_top_list>li>a{
+    color: white;
+}
+.navigation_top_list>li a:hover{
+    text-decoration: none;
+}
+.navigation_top_list>li:nth-child(2){
+    position: relative;
+}
+#search{
+    height: 30px;
+    margin-top: 13px;
+    width: 300px;
+    float: right;
+    margin-right: 10px;
+}
+#account:hover .account_set{
+    display: block;
+}
+.account_set{
+    z-index: 10;
+    display: none;
+    background: white;
+    width: 304px;
+    height: 200px;
+    /*border: 1px grey solid;*/
+    box-shadow:  0 0 1px grey inset;
+    position: absolute;
+    top: 59px;
+    left: -119px;
+    color: #000000;
+}
+.account_set>div{
+    float: left;
+    width: 150px;
+}
+.account_set>div ul{
+    margin: 0 20px;
+    list-style-type: none;
+    color: black;
+}
+.account_set li{
+    line-height: 50px;
+    font-size: 13px;
+}
+.account_set a:hover{
+    color: red;
+}
+.ul_left li:first-child{
+    color: #6a9486;
+    font-size: 18px;
+}
+.ul_right li:first-child{
+    color: #bc838a;
+    font-size: 18px;
+}
+.account_set a{
+    text-decoration: none;
+    color: black;
+}
+.content:after{
+    clear:both;
+    content:'.';
+    display:block;
+    width: 0;
+    height: 0;
+    visibility:hidden;
+}
+.content{
+    width: 990px;
+    padding-top: 20px;
+    margin: 0 auto;
+
+}
+.left_content{
+    float: left;
+    width: 110px;
+}
+#left_content:after{
+    clear:both;
+    content:'.';
+    display:block;
+    width: 0;
+    height: 0;
+    visibility:hidden;
+}
+.middle_content:after{
+    clear:both;
+    content:'.';
+    display:block;
+    width: 0;
+    height: 0;
+    visibility:hidden;
+}
+.middle_content{
+    float: right;
+    width: 851px;
+    border: 1px  #dcdcdc solid;
+
+}
+.left_part{
+    float: left;
+    width: 726px;
+    margin-left: 10px;
+}
+
+.left_content ul{
+    list-style-type: none;
+}
+.left_content ul li{
+    height: 30px;
+}
+.left_content ul li a{
+    text-decoration: none;
+    color: #000000;
+}
+.left_content ul li a:hover{
+    color: red;
+}
+.personal_nav{
+    margin-top: 10px;
+    height:60px;
+    width:100%;
+}
+.personal_nav p{
+    margin: 0;
+    height:25px;
+    width:100%;
+    border-bottom: 1px #dcdcdc solid;
+}
+.personal_nav p span{
+    padding: 3px 5px;
+    height: 25px;
+   display: inline-block;
+    font-weight: bolder;
+    margin-left: 10px;
+    border:1px #dcdcdc solid;
+    border-bottom: 1px white solid;
+}
+.personal_nav ul{
+    height:35px;
+    width:100%;
+    border-bottom: 1px  #dcdcdc solid;
+}
+.personal_nav ul li{
+    list-style-type: none;
+    float: left;
+    font-size: 15px;
+    padding:5px 10px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-weight: bold;
+}
+.personal_nav ul li:hover{
+    cursor: pointer;
+}
+.personal_detail{
+    padding:10px 45px;
+    height:500px;
+    width:100%;
+}
+.personal_detail p{
+    height:26px;
+    width:100%;
+}
+.date_p input{
+    height:26px;
+}
+.personal_detail label{
+    font-size: 13px;
+    font-weight: 500;
+    width:72px;
+}
+.tip_div{
+    height:22px;
+    width:100%;
+    margin:10px 0;
+    letter-spacing: 3px;
+}
+.personal_detail .user_photo_p{
+    margin-top: 20px;
+    height:94px;
+}
+.user_photo_p label{
+    float: left;
+
+
+}
+.user_photo_p>span{
+    display: inline-block;
+    position: relative;
+    float: left;
+    height:80px;
+    width:80px;
+}
+.user_photo_p img{
+    height:80px;
+    width:80px;
+
+}
+.user_photo_p>span>a{
+    position: absolute;
+    bottom:0px;
+    margin-left: 10px;
+    width: 80px;
+    color: white;
+    margin-left: 0px;
+    text-align: center;
+    background: rgba(0,0,0,0.5);
+    visibility: hidden;
+}
+.user_photo_p>span:hover a{
+    visibility: visible;
+    cursor: pointer;
+}
+.save_div{
+    border-top: 1px #dcdcdc solid;
+    margin:10px 0;
+    padding:10px 80px;
+}
+.save_div input{
+    color: white;
+    background: orange;
+    padding:3px 10px;
+    border-radius: 5px;
+}
+.CPM{
+    width:400px;
+    height:150px;
+    background: rgba(200,200,200,1);
+    text-align: center;
+    line-height:150px;
+    font-size: 35px;
+    border-radius: 5px;
+    position: absolute;
+    top:0px;
+    left:0px;
+    right:0px;
+    margin:auto;
+    animation: aa 2s forwards;
+}
+@keyframes aa{
+    0%{  opacity: 1; }
+    100%{  opacity: 0;  }
+}
+
+

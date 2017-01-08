@@ -1,0 +1,28 @@
+<link rel="stylesheet" type="text/css" href="stylesheets/photoUpLoad.css">
+    <div class="middle_content">
+        <div class="personal_nav">
+            <p><span>个人资料</span></p>
+            <ul class="">
+                <li><a href="#/myInformations/personalData">基本资料</a></li>
+                <li><a href="#/myInformations/photoUpLoad">头像照片</a></li>
+            </ul>
+        </div>
+        <div class="personal_detail">
+            <!--<div class="animated rotateOut infinite">成功修改头像</div>-->
+            <form id="headImgLoad">
+                <input type="text" hidden value="" name="userName" id="userName">
+            <a href="javascript:;" class="file">更换头像
+                <input type="file" name="headImg" id="file_upload">
+            </a>
+            </form>
+            <div class="image_container">
+                <img id="preview" width="300"  src="images/headImg/{{data.headImg}}" height="auto" >
+            </div>
+            <input type="button" value="保存"  class="save_photo">
+            <!--<div class="CPM">成功修改头像</div>-->
+        </div>
+    </div>
+
+<script src="javascripts/photoUpLoad.js"></script>
+<script src="javascripts/operateCookie.js"></script>
+

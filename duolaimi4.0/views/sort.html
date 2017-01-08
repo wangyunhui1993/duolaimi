@@ -1,0 +1,15 @@
+
+<link rel="stylesheet" type="text/css" href="/stylesheets/homePage.css">
+<div id="demo">
+    <div class="headerb">
+        <div class="headerb_se">
+            <div class='logo'><img src="/images/logo.png" alt="" /></div>
+            <div class="search"><p class="pp"><input type="text" placeholder="搜索：关键词" class="searchcontent"/><span class="fa fa-search"></span></p><input type="button" value="搜索" id="searchcustume" /></div>
+        </div>
+    </div>
+    <div class="daohang">
+        <a href="index.html">首页</a><a href="#/sort/sortShow" ng-click="sort('hot')">秋装热卖</a><a href="#/sort/sortShow" ng-click="sort('NMC')">男中童</a><a href="#/sort/sortShow" ng-click="sort('WMC')">女中童</a><a href="#/sort/sortShow" ng-click="sort('NYC')">男幼童</a><a href="#/sort/sortShow" ng-click="sort('WYC')">女幼童</a><a href="#/sort/sortShow" ng-click="sort('BC')">婴童</a><a href="#/sort/sortShow" ng-click="sort('shoes')">鞋品专区</a><a href="#/sort/sortShow" ng-click="sort('UC')">内配专区</a><a href="#/sort/sortShow" ng-click="sort('new')">冬上新</a><a href="#/community">社区</a>
+    </div>
+</div>
+<ui-view></ui-view>
+<script type="text/javascript" src='/javascripts/homePage.js'></script>

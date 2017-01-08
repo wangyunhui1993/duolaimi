@@ -1,0 +1,59 @@
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/deliverAddress.css">
+    <div class="middle_content">
+        <h2 class="h2_single">收货地址</h2>
+        <div class="require_div"><span>新增收货地址</span><span>全部为必填</span></div>
+        <form  class="consignee_form">
+            <input type="text" hidden id="userName" name="userName">
+            <div class="area_div">
+                <span>所在地区:</span>
+                <span id="consigneeArea">
+                    <select class="prov" name="deliverAddress"></select>
+                    <select class="city"  name="deliverAddress"></select>
+                    <select class="dist"  name="deliverAddress"></select>
+                </span>
+            </div>
+            <div class="detail_address-div"><span>详细地址:</span><textarea name="detailAddress" placeholder="建议您如实填写详细收货地址，例如街道名称，门牌号码，楼层和房间号等信息">{{single.detailAddress}}</textarea></div>
+            <div class="postcode_div"><span>邮政编码:</span><input type="number" name="postCodes" value="{{single.postCodes}}"></div>
+            <div class="consignee_name_div"><span>收货人姓名:</span><input type="text" name="deliverName" value="{{single.deliverName}}"></div>
+            <div class="consignee_name_div"><span>手机号码:</span><input type="text" name="deliverPhone" value="{{single.deliverPhone}}"></div>
+            <div class="default_adress_div">
+                <!--<input type="checkbox" name="defaultAddress"><label for="">设置为默认收货地址</label>-->
+            </div>
+            <div class="save_div">
+                <input type="button" id="save" value="保存">
+            </div>
+        </form>
+        <div class="consignee_address_list_div">
+            <div class="address_count_div">
+                <!--<span>已经保存了<span></span>条地址，还能保存<span></span>条地址</span>-->
+            </div>
+            <table class="consignee_address_table">
+                    <tr>
+                        <th>收货人</th>
+                        <th>所在地区</th>
+                        <th>详细地址的</th>
+                        <th>邮编</th>
+                        <th>手机号</th>
+                        <th>操作</th>
+                        <th> </th>
+                    </tr>
+                <tr class="addressList" ng-repeat="addr in data">
+                    <td>{{addr.deliverName}}</td>
+                    <td>{{addr.deliverAddress[0]}}&nbsp;{{addr.deliverAddress[1]}}&nbsp;{{addr.deliverAddress[2]}}</td>
+                    <td>{{addr.detailAddress}}</td>
+                    <td>{{addr.postCodes}}</td>
+                    <td>{{addr.deliverPhone}}</td>
+                    <td><a  ng-click="editAddress($index)">修改</a> | <a href="" ng-click="deleteAddress($index)">删除</a></td>
+                    <!--<td><button>设为默认</button></td>-->
+                </tr>
+
+            </table>
+        </div>
+
+
+    </div>
+<script type="text/javascript" src="/javascripts/jquery.cityselect.js"></script>
+<script src="/javascripts/city.min.js"></script>
+<script type="text/javascript" src="/javascripts/deliverAddress.js"></script>
+    <script src="operateCookie.js"></script>

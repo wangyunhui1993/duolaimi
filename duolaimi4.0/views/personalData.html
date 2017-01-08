@@ -1,0 +1,65 @@
+ <link rel="stylesheet" type="text/css" href="/stylesheets/personalData.css">
+    <!--<link rel="stylesheet" href="/stylesheets/font-awesome-4.6.3/css/font-awesome.min.css">-->
+    <!--<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />-->
+    <!--<link rel="stylesheet" href="../dist/css/bootstrap.min.css">-->
+    <!--<script src="../dist/js/bootstrap.min.js"></script>-->
+
+    <div class="middle_content">
+       <div class="personal_nav">
+            <p><span>个人资料</span></p>
+           <ul class="">
+               <li><a href="#/myInformations/personalData">基本资料</a></li>
+               <li><a href="#/myInformations/photoUpLoad">头像照片</a></li>
+           </ul>
+       </div>
+        <div class="personal_detail">
+            <form id="dataForm">
+                <input type="text" name="userName" hidden value="">
+            <div class="tip_div">
+                亲爱的<b id="userName"></b>,请填写完整的资料。
+            </div>
+            <p class="user_photo_p">
+                <label for="">当前头像:</label>
+                 <span>
+                     <img src="" id="headImg" alt="">
+                     <a href="/#/myInformations/photoUpLoad">编辑头像</a>
+                 </span>
+
+            </p>
+            <!--<p><label for="">昵称:</label><input type="text" name="userName" hidden value="{{data.userName}}"></p>-->
+            <p><label for="">真实姓名:</label><input type="text" name="realName"></p>
+            <p><label for="">性别:</label><input type="radio" name="sex" value="男"><label for="">男</label><input value="女" type="radio" name="sex"><label
+                    for="">女</label></p>
+            <p  class="date_p"><label for="">生日:</label>
+                <input type="date" name="birthDay">
+            </p>
+            <p><label for="">居住地:</label>
+                 <span id="adress">
+            <select class="prov" name="address" ></select>
+            <select class="city" name="address" ></select>
+            <select class="dist" name="address"  ></select>
+        </span>
+            </p>
+
+
+            <p><label for="">家乡:</label>
+                 <span id="hometown">
+            <select class="prov" name="homeTown" >
+            </select>
+            <select class="city" name="homeTown" >
+            </select>
+            <select class="dist" name="homeTown" >
+            </select>
+        </span>
+            </p>
+
+        <div class="save_div">
+            <input type="button" id="submit" value="保存">
+        </div>
+            </form>
+        </div>
+    </div>
+
+<script type="text/javascript" src="javascripts/jquery.cityselect.js"></script>
+<script type="text/javascript" src="javascripts/personalData.js"></script>
+

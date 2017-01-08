@@ -1,0 +1,400 @@
+
+<link rel="stylesheet" href="stylesheets/issuedCommodityPage.css">
+        <div class="center_view">
+            <form id= "uploadForm">
+                <input type="text" hidden="hidden"  name="shopUserName" id="UserName">
+                <input type="text" hidden="hidden"  name="issuedTime" id="issuedTime">
+            <div class="issuedModule">
+                <div class="title_div"><h2>填写宝贝信息</h2><span>（注：带*号的为必填项）</span></div>
+                <div class="property_div">
+                    <table class="property_table">
+                        <tbody>
+                        <tr class="commodity_name">
+                            <td class="property_title">
+                                <span class="if_must">* </span>宝贝标题</td><td><input name="commodityTitle" type="text" id="commodityTitle"> <span id="commodityTitleLength">0/60</span>
+                        </td>
+                        </tr>
+                        <tr class="commodity_bright">
+                            <td class="property_title">
+                                宝贝买点
+                            </td>
+                            <td>
+                                <textarea name="commodityBright" id="commodityBright"></textarea> <span id="commodityBrightLength">0/150</span>
+                            </td>
+                        </tr>
+                        <tr class="commodity_property">
+                            <td class="property_title">
+                                <span class="if_must"></span>宝贝属性
+                            </td>
+                            <td>
+                                <div class="commodity_property_1">
+                                    <div class="prompt_message"> 没有的属性可不填，错误填写宝贝属性，可能会引起宝贝下架或搜索流量减少，影响您的正常销售，请认真准确填写！</div>
+                                    <div class="commodity_property_2">
+                                        <table class="commodity_property_table">
+                                            <tbody>
+                                            <tr>
+
+                                                <td class="property_title"><span class="if_must">* </span>宝贝类型</td>
+                                                <td>
+                                                    <select name="commodityType" id="commodityType">
+                                                        <option value=""></option>
+                                                        <option value="背心吊带" >背心吊带</option>
+                                                        <option value="衬衫">衬衫</option>
+                                                        <option value="袜子">袜子</option>
+                                                        <option value="旗袍/唐装/民族服饰">旗袍/唐装/民族服饰</option>
+                                                        <option value="内衣裤">内衣裤</option>
+                                                        <option value="家居服">家居服</option>
+                                                        <option value="配饰">配饰</option>
+                                                        <option value="演出服">演出服</option>
+                                                        <option value="礼服">礼服</option>
+                                                        <option value="外出服">外出服</option>
+                                                        <option value="裤子">裤子</option>
+                                                        <option value="毛衣/针织衫">毛衣/针织衫</option>
+                                                        <option value="帽子/围巾/手套">帽子/围巾/手套</option>
+                                                        <option value="披风/斗篷">披风/斗篷</option>
+                                                        <option value="亲子装">亲子装</option>
+                                                        <option value="裙子">裙子</option>
+                                                        <option value="T恤">T恤</option>
+                                                        <option value=套装"">套装</option>
+                                                        <option value="卫衣/绒衫">卫衣/绒衫</option>
+                                                        <option value="外套/夹克/大衣">外套/夹克/大衣</option>
+                                                        <option value="校服">校服</option>
+                                                        <option value="羽绒服">羽绒服</option>
+                                                        <option value="传统布鞋">传统布鞋</option>
+                                                        <option value="帆布鞋">帆布鞋</option>
+                                                        <option value="凉鞋">凉鞋</option>
+                                                        <option value="棉鞋">棉鞋</option>
+                                                        <option value="皮鞋">皮鞋</option>
+                                                        <option value="亲子鞋">亲子鞋</option>
+                                                        <option value="拖鞋">拖鞋</option>
+                                                        <option value="舞蹈鞋">舞蹈鞋</option>
+                                                        <option value="学步鞋">学步鞋</option>
+                                                        <option value="靴子/雪地鞋">靴子/雪地鞋</option>
+                                                        <option value="运动鞋">运动鞋</option>
+                                                        <option value="雨鞋">雨鞋</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="property_title">货号</td>
+                                                <td><input name="commodityNum" type="text"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="property_title"><span class="if_must">* </span>品牌</td>
+                                                <td><input name="commodityBrand" id="commodityBrand" type="text"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="property_title">领型</td>
+                                                <td>
+                                                    <select name="commodityCollarType" id="collarType">
+                                                        <option value=""></option>
+                                                        <option value="立领">立领</option>
+                                                        <option value="西装领">西装领</option>
+                                                        <option value="可脱卸帽">可脱卸帽</option>
+                                                        <option value="双层领">双层领</option>
+                                                        <option value="V领">V领</option>
+                                                        <option value="圆领">圆领</option>
+                                                        <option value="翻领">翻领</option>
+                                                        <option value="无领">无领</option>
+                                                        <option value="连帽（不可脱卸）">连帽（不可脱卸）</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="property_title">衣门襟</td>
+                                                <td>
+                                                    <select name="commodityPlacket" id="placket">
+                                                        <option value=""></option>
+                                                        <option value="双排扣">双排扣</option>
+                                                        <option value="单排扣">单排扣</option>
+                                                        <option value="拉链">拉链</option>
+                                                        <option value="斜拉链门禁">斜拉链门禁</option>
+                                                        <option value="套头">套头</option>
+                                                        <option value="无扣无拉链">无扣无拉链</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="property_title">面料分类</td>
+                                                <td>
+                                                    <select name="commodityLiningSort" id="liningSort">
+                                                        <option value=""></option>
+                                                        <option value="人造彩棉">人造彩棉</option>
+                                                        <option value="天然彩棉">天然彩棉</option>
+                                                        <option value="棉">棉</option>
+                                                        <option value="棉弹牛仔布">棉弹牛仔布</option>
+                                                        <option value="棉麻">棉麻</option>
+                                                        <option value="棉涤">棉涤</option>
+                                                        <option value="纯棉">纯棉</option>
+                                                        <option value="亚麻">亚麻</option>
+                                                        <option value="毛料">毛料</option>
+                                                        <option value="皮革">皮革</option>
+                                                        <option value="牛仔布">牛仔布</option>
+                                                        <option value="绒布">绒布</option>
+                                                        <option value="丝绸">丝绸</option>
+                                                        <option value="化纤">化纤</option>
+                                                        <option value="混纺">混纺</option>
+                                                        <option value="棉混纺布">棉混纺布</option>
+                                                        <option value="涤粘">涤粘</option>
+                                                        <option value="锦棉">锦棉</option>
+                                                        <option value="锦涤">锦涤</option>
+                                                        <option value="粗花呢">粗花呢</option>
+                                                        <option value="摇粒绒布">摇粒绒布</option>
+                                                        <option value="毛呢布">毛呢布</option>
+                                                        <option value="抓毛布">抓毛布</option>
+                                                        <option value="牛仔布">牛仔布</option>
+                                                        <option value="抓毛布">抓毛布</option>
+                                                        <option value="其他">其他</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="property_title">材质</td>
+                                                <td>
+                                                    <select name="commodityTexture" id="texture">
+                                                        <option value=""></option>
+                                                        <option value="EVA">EVA</option>
+                                                        <option value="合成革">合成革</option>
+                                                        <option value="牛反绒">牛反绒</option>
+                                                        <option value="羊皮">羊皮</option>
+                                                        <option value="布网">布网</option>
+                                                        <option value="牛皮">牛皮</option>
+                                                        <option value="帆布">帆布</option>
+                                                        <option value="人造革">人造革</option>
+                                                        <option value="真皮">真皮</option>
+                                                        <option value="PU">PU</option>
+                                                        <option value="三明治网">三明治网</option>
+                                                        <option value="纤维网布">纤维网布</option>
+                                                        <option value="牛二层皮">牛二层皮</option>
+                                                        <option value="反毛皮">反毛皮</option>
+                                                        <option value="其他">其他</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                                <tr>
+                                                    <td class="property_title"><span class="if_must">* </span>发货地址</td>
+                                                    <td>
+                                                        <div class="area_div">
+                                                            <span id="commodityAddress">
+                                                                <select name="address" id="address" class="prov"></select>
+                                                                <select  name="address"  class="city"></select>
+                                                                <!--<select class="dist" disabled="disabled"></select>-->
+                                                            </span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <table class="commodity_property_table">
+                                            <tbody>
+                                            <tr>
+                                                <td class="property_title"><span class="if_must">* </span>适用对象</td>
+                                                <td>
+                                                    <select name="commodityAppleTocrowd" id="appleTocrowd">
+                                                        <option value=""></option>
+                                                        <option value="男中童">男中童</option>
+                                                        <option value="女中童">女中童</option>
+                                                        <option value="男幼童">男幼童</option>
+                                                        <option value="女幼童">女幼童</option>
+                                                        <option value="婴童">婴童</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="property_title">风格</td>
+                                                <td>
+                                                    <select name="commodityStyle" id="style">
+                                                        <option value=""></option>
+                                                        <option value="运动">运动</option>
+                                                        <option value="体闲">体闲</option>
+                                                        <option value="民族">民族</option>
+                                                        <option value="百搭">百搭</option>
+                                                        <option value="原创">原创</option>
+                                                        <option value="淑女">淑女</option>
+                                                        <option value="英伦">英伦</option>
+                                                        <option value="公主">公主</option>
+                                                        <option value="欧美">欧美</option>
+                                                        <option value="韩版">韩版</option>
+                                                        <option value="日系">日系</option>
+                                                        <option value="其他">其他</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="property_title">服装版型</td>
+                                                <td>
+                                                    <select name="commodityTypeVersion" id="typeVersion">
+                                                        <option value=""></option>
+                                                        <option value="特宽">特宽</option>
+                                                        <option value="修身">修身</option>
+                                                        <option value="标准">标准</option>
+                                                        <option value="宽松">宽松</option>
+                                                        <option value="其他">其他</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="property_title">厚薄</td>
+                                                <td>
+                                                    <select name="commoeityThicknessOrThin" id="thicknessOrThin">
+                                                        <option value=""></option>
+                                                        <option value="薄款">薄款</option>
+                                                        <option value="加厚">加厚</option>
+                                                        <option value="加绒">加绒</option>
+                                                        <option value="常规">常规</option>
+                                                        <option value="其他">其他</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="property_title">口袋样式</td>
+                                                <td>
+                                                    <select name="commodityPocketStyle" id="pocketStyle">
+                                                        <option value=""></option>
+                                                        <option value="立体贴袋">立体贴袋</option>
+                                                        <option value="明辑线贴袋">明辑线贴袋</option>
+                                                        <option value="暗辑线贴袋">暗辑线贴袋</option>
+                                                        <option value="戴盖挖袋">戴盖挖袋</option>
+                                                        <option value="侧缝插袋">侧缝插袋</option>
+                                                        <option value="省插袋">省插袋</option>
+                                                        <option value="明辑线挖袋">明辑线挖袋</option>
+                                                        <option value="嵌线挖袋">嵌线挖袋</option>
+                                                        <option value="拉链挖袋">拉链挖袋</option>
+                                                        <option value="折裥贴袋">折裥贴袋</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="property_title">图案</td>
+                                                <td>
+                                                    <select name="commodityPattern" id="pattern">
+                                                        <option value=""></option>
+                                                        <option value="条纹">条纹</option>
+                                                        <option value="格子">格子</option>
+                                                        <option value="原点">原点</option>
+                                                        <option value="卡通动漫">卡通动漫</option>
+                                                        <option value="碎花">碎花</option>
+                                                        <option value="纯色">纯色</option>
+                                                        <option value="豹纹">豹纹</option>
+                                                        <option value="其他">其他</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="property_title"><span class="if_must">* </span>使用季节</td>
+                                                <td>
+                                                    <select name="commodityApplyToSeason" id="applyToSeason">
+                                                        <option value=""></option>
+                                                        <option value="春季">春季</option>
+                                                        <option value="夏季">夏季</option>
+                                                        <option value="秋季">秋季</option>
+                                                        <option value="冬季">冬季</option>
+                                                        <option value="不限季节">不限季节</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="commodity_property_3">
+                                        <div class="applyTo_Age_title"> <label for=""><span class="if_must">* </span>适用年龄</label></div>
+                                        <div class="applyTo_Age_div">
+                                            <ul>
+                                                <li><input type="checkbox" name="applyToAge" value="一周岁以下"><label for="">一周岁以下</label></li>
+                                                <li><input type="checkbox" name="applyToAge" value="1〜3周岁"><label for="">1〜3周岁</label></li>
+                                                <li><input type="checkbox" name="applyToAge" value="3〜5周岁"><label for="">3〜5周岁</label></li>
+                                                <li><input type="checkbox" name="applyToAge" value="5〜7周岁"><label for="">5〜7周岁</label></li>
+                                                <li><input type="checkbox" name="applyToAge" value="7〜11周岁"><label for="">7〜11周岁</label></li>
+                                                <li><input type="checkbox" name="applyToAge" value="11〜13周岁"><label for="">11〜13周岁</label></li>
+                                                <li><input type="checkbox" name="applyToAge" value="13〜15周岁"><label for="">13〜15周岁</label></li>
+                                                <li><input type="checkbox" name="applyToAge" value="15〜17周岁"><label for="">15〜17周岁</label></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="commodity_picture">
+                            <td class="property_title"><span class="if_must">* </span>宝贝图片</td>
+                            <td>
+                                <div class="commodity_picture_title">图片上传后宝贝详情页自动提供放大镜功能,默认第一张为主图</div>
+                                <span class="loadImgTip">您还可以上传<span class="loadImgNum">12</span>张图片</span>
+                                <!--图片上传显示的设计-->
+                                <div class="uploadArea">
+
+                                    <ul class="loadImgShow">
+                                        <label class="upLoadLabel">
+                                            <div class="upLoad" title="点击上传图片">╋</div>
+                                            <input type="file"name="commodityImages" accept="image/jpeg,image/png,image/gif" onchange="upload(this)">
+                                        </label>
+
+                                    </ul>
+                                </div>
+
+                                <!--<div class="commodity_picture_div"><input type="file" class="commodityImg" name="commodityImg" accept="image/jpeg,image/png"><span class="important_picture"><span class="if_must">* </span>宝贝主图</span><b>+</b></div>-->
+                                <!--<div class="commodity_picture_div" ><input type="file"  class="commodityImg"  name="commodityImg"  accept="image/jpeg,image/png"><b>+</b></div>-->
+                                <!--<div  class="commodity_picture_div" ><input type="file"  class="commodityImg"   name="commodityImg"  accept="image/jpeg,image/png"><b>+</b></div>-->
+                                <!--<div  class="commodity_picture_div" ><input type="file"  class="commodityImg"  name="commodityImg"   accept="image/jpeg,image/png"><b>+</b></div>-->
+                                <!--<div  class="commodity_picture_div" ><input type="file"   class="commodityImg"  name="commodityImg"  accept="image/jpeg,image/png"><b>+</b></div>-->
+                            </td>
+                        </tr>
+                        <tr class="commodity_ specification"><td class="property_title"><span class="if_must">* </span>宝贝规格</td><td><div class="commodity_specification_1">
+                            <table class="color_table">
+                                <tr>
+                                    <td><span class="if_must">* </span>颜色分类</td>
+                                    <td>图片</td>
+                                    <td><span class="if_must">* </span>价格</td>
+                                    <td><span class="if_must">* </span>数量</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="text" class="select_color" name="commodityColor" placeholder="填写颜色"></td>
+                                    <td> <input class="select_images" type="button" value="本地上传"><input type="file" name="commodityColorImages" class="select_images select_up"><div class="small_img_show"><img src="" alt=""><a>删除</a></div></td>
+                                    <td><input type="text" name="commodityPrice" class="commodityPrice"></td>
+                                    <td><input type="text" name="commodityQuantity" value="" class="commodityQuantity"></td>
+                                </tr>
+                            </table>
+                            <div class="reference_height">
+                                <p id="hieghtTitle"><span class="if_must">* </span>参考身高：</p>
+                                <div class="reference_height_list">
+                                    <ul id="reference_height_list_ul">
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div></td></tr>
+                        <tr class="commodity_quantity"><td class="property_title"><span class="if_must">* </span>宝贝数量</td><td><input type="text" readonly name="commodityTitleQuantity" id="commodityTitleQuantity"></td></tr>
+                        <tr class="commodity_details"><td class="property_title">宝贝描述</td><td><ul class="detail_list"><li>
+                            <textarea name="commodityTextDetail" id="" placeholder="文字描述"></textarea>
+                            <!--<input type="button" value="删除">-->
+                        </li><li>
+
+                            <span class="detailloadImgTip">图片描述：您还可以上传<span class="detailloadImgNum">20</span>张图片</span>
+                            <!--图片上传显示的设计-->
+                            <div class="detailuploadArea">
+
+                                <ul class="detailloadImgShow">
+                                    <label class="detailupLoadLabel">
+                                        <div class="detailupLoad" title="点击上传图片">╋</div>
+                                        <input type="file" accept="image/jpeg,image/png,image/gif" name="commodityImgDetail" onchange="detailupload(this)" >
+                                    </label>
+                                </ul>
+                            </div>
+
+
+                        </li></ul></td></tr>
+                        <tr class="commodity_recommend"><td class="property_title">橱窗推荐</td><td><input type="checkbox" name="commodityRecommend" value="true"><label
+                                for=""> 是</label></td></tr>
+
+                       <tr class="issue_button"><td colspan="2"><input type="button" value="发布" id="issueButton"></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            </form>
+        </div>
+    </div>
+
+</div>
+<script type="text/javascript" src="javascripts/jquery.cityselect.js"></script>
+<script src="javascripts/issuedCommodity.js"></script>

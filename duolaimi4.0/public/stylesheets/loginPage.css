@@ -1,0 +1,181 @@
+.logo{
+	width: 990px;
+	height: 60px;
+	margin: 10px auto;
+	position: relative;
+}
+.logo img{
+	height: 60px;
+width: 170px;
+}
+.logo b{
+	font-size: 35px;
+	height: 60px;
+	position: absolute;
+	top: 10px;
+	left: 200px;
+
+}
+.content{
+	height: 475px;
+	width: 100%;
+	background-color:#e09b40 ;
+}
+.content>div{
+	width: 990px;
+	height: 475px;
+	margin: 0 auto;
+	background: grey;
+	background-image: url(/images/a.jpg);
+	background-size:990px,475px ;
+}
+#loginwin{
+	width: 346px;
+	height: 369px;
+	background:#ffffff;
+	float: right;
+	margin-top: 45px;
+}
+#logintest{
+	height: 55px;
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+    color: #e4393c;
+    margin: 0px;
+    border-bottom: 1px #f5f5f5 solid;
+    line-height: 55px;
+        font-weight: 700;
+}
+#tishi{
+	font-size: 15px;
+	height: 20px;
+	width: 346px;
+	line-height: 20px;
+	margin: 0px;
+	text-align: center;
+	margin: 3px auto;
+}
+#loginform{
+	width: 306px;
+	height: 188px;
+	margin: 0 auto;
+}
+#loginname{
+	width: 304px;
+	height: 38px;
+	border: 1px solid #bdbdbd;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	
+}
+#loginname>input{
+	width: 254px;
+	height: 18px;
+	line-height: 38px;
+	outline: none;
+	border: none;
+		font-size: 18px;
+			padding-left: 10px;
+}
+#loginname>label{
+	font-size: 20px;
+	line-height: 38px;
+	text-align: center;
+	background:#f3f3f3;
+	color: #d8d8d8;
+	width: 38px;
+}
+#loginpwd{
+	width: 304px;
+	height: 38px;
+	border: 1px solid #bdbdbd;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+#loginpwd>input{
+	width: 254px;
+	height: 18px;
+	line-height: 38px;
+	outline: none;
+	border: none;
+	font-size: 18px;
+	padding-left: 10px;
+}
+#loginpwd>label{
+	font-size: 20px;
+	line-height: 38px;
+	text-align: center;
+	background:#f3f3f3;
+	color: #d8d8d8;
+	width: 38px;
+}
+#safe{
+	width: 306px;
+	height: 18px;
+	margin: 0 auto;
+	color:#717171;
+}
+#safe>a{
+	text-decoration: none;
+	float: right;
+	color:#717171;
+}
+#safe>a:hover{
+	text-decoration: underline;
+	color: red;
+}
+#divbtn{
+	width: 304px;
+	height: 33px;
+	margin: 30px auto;
+}
+#divbtn>input{
+	width: 304px;
+	height: 33px;
+	color: #fff8d7;
+	background: #e23a3a;
+}
+#divbottom{
+	width: 306px;
+	height: 50px;
+	margin: 0 auto;
+	border-top: 1px solid #f5f5f5;
+}
+#startzhuce{
+	float: right;
+	line-height: 50px;
+	color: red;
+	text-decoration: none;
+}
+#startzhuce:hover{
+	text-decoration: underline;
+}
+#footer{
+	width: 990px;
+	height: 86px;
+	margin: 0 auto;
+	margin-top:30px ;
+}
+#footer a{
+	color: #575757;
+	text-decoration: none;
+	font-size: 14px;
+	padding: 0 10px;
+}
+#footer a:hover{
+	text-decoration: underline;
+	color: red;
+}
+.links{
+	width: 990px;
+height: 18px;
+}
+.copyright{
+	height: 18px;
+	width: 990px;
+	margin: 10px auto;
+	color: #666;
+	font-size: 10px;
+	text-align: center;
+}

@@ -1,0 +1,158 @@
+
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+    <link rel="stylesheet" href="../dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/myShopping.css">
+	<script src="../dist/js/bootstrap.min.js"></script>
+
+		<div class="content">
+			<div class="logoSearch">
+
+					<div class="logo">
+					<img src="images/logo.png"/>
+					<h1>购物车</h1>
+				</div>
+				<div class="search_div ">
+					
+					
+					 <div id="search" class="input-group search_part">
+					 	
+				 	<input type="text" class="form-control" placeholder="搜索商品或店铺">
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-default">搜索</button>
+                </span>
+                
+            </div>
+				<div class="term_select">
+						<select name="" id="">
+							<option value="clothing" selected>宝贝</option>
+							<option value="store">店铺</option>
+					</select>
+				</div>	
+				</div>
+	</div>
+	
+	
+				<div class="all_shopping">
+					<span>全部商品</span>
+					<!--<div class="accounts_div">-->
+						<!--<span>已选商品</span>-->
+						<!--<span class="money">78.5</span>-->
+						<!--<input type="button" value="结算"/>-->
+					<!--</div>-->
+				</div>
+				<div class="table_list">
+					<div class="all_select">
+						<!--<div><input type="checkbox" /></div><span>全选</span>-->
+					</div>
+					<ul class="property_list">
+						<li>商品信息</li>
+						<li>单价</li>
+						<li>数量</li>
+						<li>金额</li>
+						<li>操作</li>
+					</ul>
+				</div>
+				<div class="allshoppinglist">
+
+
+
+					<div class="commodityList" ng-repeat="commodity in data">
+						<div class="shoppingNameDiv">
+							<div><span>店铺：</span><a href="">{{commodity.shopName}}</a></div>
+						</div>
+						<div class="commosityDiv">
+							<ul>
+								<li class="commoditySelect"><div><input type="checkbox" class="singleSelect"></div></li>
+								<li class="commosityMsg">
+									<div class="commodityImg" >
+										<img src="images/commodityImages/{{commodity.commodityImages}}" width="103px" height="auto" alt="" ng-click="commodityList($index)">
+									</div>
+									<div class="commodityName"><a href="" ng-click="commodityList($index)">{{commodity.commodityTitle}}</a></div>
+									<div class="commodityInfo">
+										<p><span>颜色：</span><span>{{commodity.color}}</span></p>
+										<p><span>尺码：</span><span>{{commodity.height}}</span></p>
+									</div>
+								</li>
+								<li class="commodityPrice">
+									<p><span>￥</span><span ng-bind="cc" ng-init="cc=commodity.price"></span></p>
+								</li>
+								<li class="commodityQuantity">
+									<div class="commodityQuantityDiv">
+										<!--<a class="fa fa-minus reduceNum" ng-click="ngQuantity($index)"></a>-->
+										<input type="number" min="1" class="purchaseNum"  max="{{commodity.maxNum}}" value="{{commodity.quantity}}" ng-model="bb" ng-init="bb=commodity.quantity" ng-keyup="ngQuantity($index)">
+										<!--<a class="fa fa-plus addNum"  ng-click="ngQuantity($index)"></a>-->
+									</div>
+								</li>
+								<li class="totalPrice">
+									<p><span>￥</span><span class="singleTotal" >{{bb*cc}}</span></p>
+								</li>
+								<li class="commodityOption">
+									<p><a href="" ng-click="moveCollect($index)">移入收藏夹</a></p>
+									<p><a href="" ng-click="deleteCommodity($index)">删除</a></p>
+								</li>
+							</ul>
+						</div>
+					</div>
+					
+					
+					<!--失效宝贝-->
+					<div class="commodityList" ng-repeat="commodity in limitData">
+						<div class="shoppingNameDiv">
+							<div><span>店铺：</span><a href="">{{commodity.shopName}}</a></div>
+						</div>
+						<div class="commosityDiv">
+							<ul>
+								<li class="commoditySelect"><p class="lostInfo">失效</p></li>
+								<li class="commosityMsg">
+									<div class="commodityImg" >
+										<img src="images/commodityImages/{{commodity.commodityImages}}" width="103px" height="auto" alt="" ng-click="limitcommodityList($index)">
+									</div>
+									<div class="commodityName"><a href="" ng-click="limitcommodityList($index)">{{commodity.commodityTitle}}</a></div>
+									<div class="commodityInfo">
+										<p><span>颜色：</span><span>{{commodity.color}}</span></p>
+										<p><span>尺码：</span><span>{{commodity.height}}</span></p>
+									</div>
+								</li>
+								<li class="commodityPrice">
+									<p><span>￥</span><span ng-bind="cc" ng-init="cc=commodity.price"></span></p>
+								</li>
+								<li class="commodityQuantity">
+									<div class="commodityQuantityDiv">
+										<!--<a class="fa fa-minus reduceNum" ng-click="ngQuantity($index)"></a>-->
+										<!--<span>{{commodity.quantity}}</span>-->
+										<input type="number" min="1" class="purchaseNum" readonly max="{{commodity.maxNum}}" value="{{commodity.quantity}}" ng-model="bb" ng-init="bb=commodity.quantity" ng-keyup="ngQuantity($index)">
+										<!--<a class="fa fa-plus addNum"  ng-click="ngQuantity($index)"></a>-->
+									</div>
+								</li>
+								<li class="totalPrice">
+									<p><span>￥</span><span class="singleTotal" >{{bb*cc}}</span></p>
+								</li>
+								<li class="commodityOption">
+									<!--<p><a href="">移入收藏夹</a></p>-->
+									<p><a href="" ng-click="limitdeleteCommodity($index)">删除</a></p>
+								</li>
+							</ul>
+						</div>
+					</div>
+					
+				</div>
+				<div class="bottom_accounts">
+					<div class="all_select">
+						<div><input type="checkbox" id="allSelect" /></div><span>全选</span>
+					</div>
+					<a href="">删除</a>
+					<a href="">移入收藏夹</a>
+					<div class='bar_float_right'>
+					<!--<span>已选商品</span>-->
+					<!--<span class="shop_number">1</span>-->
+					<!--<span>件</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+					<!--<span>合计）：</span>-->
+					<!--<span class="shop_money">67.0</span>-->
+					<input type="button" id="accounts" value="结算"/>
+					</div>
+				</div>
+			</div>
+	<script src="javascripts/shoppingCar.js"></script>
+
+
+

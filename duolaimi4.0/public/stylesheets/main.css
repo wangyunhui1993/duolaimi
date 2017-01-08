@@ -1,0 +1,198 @@
+*{
+    margin:0;
+    padding:0;
+}
+p,ul,li{margin: 0; padding: 0; list-style: none;}
+/* 评论框 */
+.comment{width: 100%;height: auto;}
+.content:after{ clear:both;
+    content:'.';
+    display:block;
+    width: 0;
+    height: 0;
+    visibility:hidden;}
+.comment .head-face{width: 10%; height: 120px; float: left; text-align: center;}
+.comment .head-face img{width: 50px; height: 50px; border-radius: 50%;}
+.comment .head-face p{font-size: 12px; font-family: "微软雅黑";}
+.comment .content{width: 90%; height: 120px; float: right;}
+
+.cont-box{ width: 100%; height: 80px; border: 1px solid #99cc66; border-top-left-radius: 5px;  border-top-right-radius: 5px; }
+.cont-box .text{ width: 96.6%; height: 86.9%; border-radius: 5px;   padding: 5px 10px; color: #999; font-family: "微软雅黑"; font-size: 12px; resize:none; border: none;  outline: none; float: left;}
+
+.tools-box{ width: 100%; height: 30px; border: 1px solid #99cc66; margin-top: 5px; border-bottom-left-radius: 5px;  border-bottom-right-radius: 5px; float: left;}
+.tools-box .operator-box-btn{ width: 85%; height: 30px; float: left;  }
+.tools-box .operator-box-btn .face-icon{display: block; float: left; margin-top:-1px; margin-left: 10px; font-family: "微软雅黑"; font-size: 22px; color: #99cc66;  cursor: pointer;}
+.tools-box .operator-box-btn .img-icon{display: block; float: left; margin-top:-11px; margin-left: 10px; font-family: "微软雅黑"; font-size: 33px; font-weight: lighter; color: #99cc66; cursor: pointer;}
+.tools-box .submit-btn{ width: 15%; height: 30px; float: right; }
+
+.tools-box .submit-btn input{ width: 100%; height: 100%; font-family: "微软雅黑"; font-size: 14px; color: #fff; cursor: pointer; border: none; outline: none; background-color: #99cc66;}
+
+/* 回复信息 */
+#info-show{float: left;  width: 100%; margin-top: 20px;}
+#info-show li{ width: 100%; height: auto; padding: 10px 0 20px 0; border-bottom: 1px dashed #c0c0c0; float: left;}
+#info-show .head-face{width: 50px;
+    height:50px;  float: left; text-align: center; margin-right: 5px;}
+#info-show .head-face img{width: 50px; height: 50px; border-radius: 50%; box-shadow: 0 0 8px #c0c0c0;}
+
+#info-show .reply-cont{ width: 89%; padding-right: 1%; float: right;}
+#info-show .reply-cont  p{ min-height: 20px; line-height: 20px;  font-family: "微软雅黑"; font-size: 14px;}
+#info-show .reply-cont .username{ color: #99cc66; margin-bottom: 5px;}
+#info-show .reply-cont .comment-body{ color: #999; max-height: auto;}
+#info-show .reply-cont .comment-footer{font-size: 12px; color: #c0c0c0; margin-top: 10px;}
+.commentImg:after{
+    content:'.';
+    display:block;
+    width: 0;
+    height: 0;
+    visibility:hidden;
+    clear: both;
+}
+.commentImg img{
+    width:150px;
+    margin-right: 10px;
+}
+.comment_content{
+    margin-bottom: 5px;
+}
+#content:after{
+    content:'.';
+    display:block;
+    width: 0;
+    height: 0;
+    visibility:hidden;
+    clear: both;
+}
+.comment_content:after{
+    content:'.';
+    display:block;
+    width: 0;
+    height: 0;
+    visibility:hidden;
+    clear: both;
+}
+.issuedComment input[type=text]{
+    float: left;
+    width:570px;
+}
+.issuedComment input[type=button]{
+    float: left;
+    width:40px;
+}
+/*上传图片*/
+.uploadArea{
+    width: 702px;
+    min-height: 78px;
+    box-shadow: 0 0 10px #666;
+    border-radius: 2px;
+    position: relative;
+}
+
+.uploadArea:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.loadImgShow{
+    padding: 5px;
+}
+
+.loadImgShow:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.loadImgShow li{
+    list-style: none;
+    width: 80px;
+    height: 60px;
+    border: 1px solid #999;
+    border-radius: 3px;
+    float: left;
+    /*margin: 10px;*/
+}
+
+.upLoadLabel input{
+    display: none;
+}
+/*初始的上传按钮样式*/
+.upLoad {
+    width: 71px;
+    height: 52px;
+    border-radius: 4px;
+    border: 4px dashed #999;
+    font-size: 30px;
+    line-height: 50px;
+    color: #999;
+    text-align: center;
+    position: absolute;
+    top:12px;
+    left: 10px;
+}
+
+.upLoad:hover,.addNewUpLoad:hover{
+    cursor: pointer;
+    border-color: #eb7350;
+    color:#eb7350;
+}
+/*点击上传后，新添加的按钮设计*/
+.addNewUpLoad{
+    width: 71px;
+    height: 52px;
+    border-radius: 4px;
+    border: 4px dashed #999;
+    font-size: 30px;
+    line-height: 52px;
+    color: #999;
+    text-align: center;
+    float: left;
+    margin-right: 5px;
+}
+
+/*删除上传图片的样式设计*/
+.delImg{
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 22px;
+    font-weight: bold;
+    color:#fff;
+    float: right;
+    -webkit-user-select: none;
+    display: none;
+}
+
+.loadImgShow li:hover .delImg{
+    display: inline-block;
+}
+
+.delImg:hover{
+    cursor: pointer;
+    background: #d04f4a;
+}
+
+/*为图片添加蒙板*/
+.imgCover{
+    width: 80px;
+    height: 60px;
+    background:rgba(0,0,0,.4);
+    display: none;
+}
+
+.loadImgShow li:hover .imgCover{
+    display: block;
+}
+.important_picture{
+    position: absolute;
+    display: block;
+    top:0px;
+    left:0px;
+    height:20px;
+    width:100px;;
+    text-align: center;
+    background: rgba(33,33,33,.7);
+    color: white;
+    z-index: 10;
+}

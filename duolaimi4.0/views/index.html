@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myHomeApp">
+<head>
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/stylesheets/font-awesome-4.6.3/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="keywords" content="儿童,服装">
+    <meta name="Discription" content="专门销售童装的平台">
+    <title>哆啦咪</title>
+    <link rel="stylesheet" href="/stylesheets/header.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/footer.css">
+    <script src='/javascripts/jquery-2.2.4.js'></script>
+</head>
+<body ng-controller="indexController">
+<div  class='header'>
+    <div class='contentHeader'>
+        <div class="navLeft" id="navLeft">
+            <a id="pleaselogin" href="loginPage.html" target="_blank">亲，请登录</a><a id="pleaseregister" href="register.html" target="_blank">免费注册</a>
+        </div>
+        <div class="navRight">
+            <ul>
+                <li><a href="index.html" class="right">哆来咪首页</a></li>
+                <li><a href="/#/myInformations/tradeState">我的信息<i></i></a></li>
+                <li><a href="/#/shoppingCar">购物车</a></li>
+                <li><a href="/#/myCollect/commodityCollection">收藏夹</a></li>
+                <li><a href="javascript:(0);" onclick="sellerCenter()">卖家中心</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<ui-view></ui-view>
+<div id="footer">
+    <div class="links">
+        <a rel="nofollow" target="_blank" href="#">
+            关于我们
+        </a>
+        |
+        <a rel="nofollow" target="_blank" href="#">
+            联系我们
+        </a>
+        |
+        <a rel="nofollow" target="_blank" href="#">
+            人才招聘
+        </a>
+        |
+        <a rel="nofollow" target="_blank" href="#">
+            商家入驻
+        </a>
+        |
+        <a rel="nofollow" target="_blank" href="#">
+            广告服务
+        </a>
+        |
+        <a rel="nofollow" target="_blank" href="#">
+            手机哆来咪
+        </a>
+        |
+        <a target="_blank" href="#">
+            友情链接
+        </a>
+        |
+        <a target="_blank" href="#">
+            销售联盟
+        </a>
+        |
+        <a href="#" target="_blank">
+            社区
+        </a>
+        |
+        <a target="_blank" href="#" clstag="pageclick|keycount|20150112ABD|9">English Site</a>
+    </div>
+    <div class="copyright">
+        Copyright&nbsp;©&nbsp;2004-2016&nbsp;&nbsp;哆来咪DLM.com&nbsp;版权所有
+    </div>
+</div>
+<script src="/angularjs/angular/angular.js"></script>
+<script src="/angularjs/angular-ui/angular-ui-router.js"></script>
+<script src="/angularjs/angular/angular-animate.js"></script>
+<script src="/javascripts/operateCookie.js"></script>
+<script src="routejs/homePageRoute.js"></script>
+</body>
+</html>

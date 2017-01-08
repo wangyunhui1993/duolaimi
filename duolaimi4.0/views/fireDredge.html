@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/stylesheets/font-awesome-4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/stylesheets/fireDredge.css">
+    <link rel="stylesheet" href="/stylesheets/header.css">
+    <script src="/javascripts/jquery-2.2.4.js"></script>
+</head>
+<body>
+<div  class='header'>
+    <div class='contentHeader'>
+        <div class="navLeft" id="navLeft">
+            <a id="pleaselogin" href="loginPage.html" target="_blank">亲，请登录</a><a id="pleaseregister" href="register.html" target="_blank">免费注册</a>
+            <!--&lt;!&ndash;<ul><li><span>你好!</span></li><li><p></p></li><li><a href="" class="usera">王云辉</a></li><li><a href="">退出登录</a></li></ul>&ndash;&gt;-->
+        </div>
+        <div class="navRight">
+            <ul>
+                <li><a href="homePage.html" class="right">哆来咪首页</a></li>
+                <li><a href="myInformations.html">我的信息<i></i></a></li>
+                <li><a href="myShopping.html">购物车</a></li>
+                <li><a href="#">收藏夹</a></li>
+                <li><a href="##" id="sellerCenter">卖家中心</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    <div class="content">
+        <div><h1>哆来咪开店认证</h1></div>
+       <div>
+           <p>请按照提示填写本人真实的资料</p>
+           <form id="submitForm">
+               <input type="text" name="userName" id="userName" hidden>
+               <table id="confirmTable">
+                   <tr>
+                       <td>真实姓名：</td>
+                       <td><input type="text" id="realName"  name="realName" placeholder="请填写真实姓名"><span id="realNameInfo"></span></td>
+                   </tr>
+                   <tr>
+                       <td>身份证号码：</td>
+                       <td><input type="text" id="cardID" name="cardID"><span id="cardIDInfo"> </span></td>
+                   </tr>
+                   <tr>
+                       <td>店铺名称：</td>
+                       <td><input type="text" id="shopName" name="shopName" placeholder="中文、字母、数字、下划线"><span id="shopNameInfo"></span></td>
+                   </tr>
+
+
+                   <tr>
+                       <td colspan="2"><div class="xycb"><input type="checkbox" id="argument"></div><label class="argument" for="">我同意<a href="">《哆来咪开店协议》</a></label><span id="argumentInfo"></span></td>
+                   </tr>
+                   <td>
+                       <td colspan="2"><input type="button" id="freeDredge" value="免费开店"></td>
+                   </td>
+               </table>
+               </form>
+       </div>
+    </div>
+</body>
+<script src="/javascripts/operateCookie.js"></script>
+<script src="/javascripts/fireDredeg.js"></script>
+</html>

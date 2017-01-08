@@ -1,0 +1,7 @@
+<link rel="stylesheet" type="text/css" href="stylesheets/sortShow.css">
+<div class="content" id="content">
+    <div ng-repeat="result in results">
+        <img src="/images/commodityImages/{{result.commodityImages[0]}}" class='customImg' ng-click="commodityDetail($index)" />
+        <div class='meessage_div'><div class='clothPrice'><div class='priceDiv'><span>¥</span> <span class='price'>{{result.commodityPrice[0]}}</span><span class='freeGet'>包邮</span></div><div class='buyNumDiv'><span>人付款</span><span class='buyNum'>{{result.salesNum}}</span></div></div><div class='clothLink'><a href='##' ng-click="commodityDetail($index)">{{result.commodityTitle}}</a></div><div class='clothAdress'><div><span class='shopName fa fa-align-justify'><a href='##' id='shopLink'>{{result.shopName}}</a></span></div><div><span class='clothCity'>{{result.address[1]}}</span> <span class='clothProvice'>{{result.address[0]}}</span></div></div></div>
+    </div>
+</div>

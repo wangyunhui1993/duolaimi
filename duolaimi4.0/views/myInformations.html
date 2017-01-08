@@ -1,0 +1,55 @@
+<link rel="stylesheet" href="/dist/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="stylesheets/myInformations.css">
+		<div class="navigation">
+			<div class="navigation_top">
+				<div class="logo"><a href="index.html"><img src="images/logo.png"/></a></div>
+				<ul class="navigation_top_list">
+					<li><a href="/#/myInformations/tradeState">首页</a></li>
+					<li id="account">账户设置
+						<span class="caret">
+						<div class="account_set">
+						<div>
+							<ul class="ul_left">
+								<li>安全设置</li>
+								<li><a href="">修改登录密码</a></li>
+								<li><a href="">密保问题设置</a></li>
+								<!--<li><a href="">支付宝绑定</a></li>-->
+							</ul>
+						</div>
+						<div>
+							<ul class="ul_right">
+								<li>个人信息</li>
+								<li><a href="/#/myInformations/deliverAddress">收货地址</a></li>
+								<li><a href="/#/myInformations/personalData">个人资料</a></li>
+							</ul>
+						</div>
+					</div>
+						</span>
+					</li>
+					<li><a href="">消息</a></li>
+				</ul>
+				 <div id="search" class="input-group">
+				 	<input type="text" class="form-control" placeholder="search">
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-default">搜索</button>
+                </span>
+                
+            </div>
+			</div>
+		</div>
+	<div class="content">
+		<div class="left_content">
+<ul>
+	<li><a href="#/shoppingCar">我的购物车</a></li>
+	<li><a href="#/myInformations/myAllOrder">所有订单</a></li>
+	<!--<li><a href="#/myInformations/haveShoppedStore">购买过的店铺</a></li>-->
+	<li><a href="#/myCollect/commodityCollection">我的收藏</a></li>
+	<li><a href="#/myInformations/myEvaluate">我的评价</a></li>
+	<li><a href="#/myInformations/afterService">售后管理</a></li>
+	<li><a href="">投诉建议</a></li>
+</ul>
+</div>
+<div class="middle_content">
+	<ui-view></ui-view>
+</div>
+</div>
